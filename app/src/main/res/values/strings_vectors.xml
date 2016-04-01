@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string translatable="false" name="path_normal"> M50,65 l 40,  0  0,10  -40, 0  -40,  0  0,-10  40, 0 z M30,40 l 10,0 0,-20 -10,0, 0,20 z M60,40 l 10,0 0,-20 -10,0, 0,20 z </string>
+    <string translatable="false" name="path_checked">M50,65 l 40,-10  0,10  -40,10  -40,-10  0,-10  40,10 z M30,40 l 10,0 0,-20 -10,0, 0,20 z M60,40 l 10,0 0,-20 -10,0, 0,20 z </string>
+</resources>

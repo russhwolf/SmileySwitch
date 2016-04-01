@@ -15,11 +15,12 @@ class MainActivity : AppCompatActivity() {
 
         verticalLayout {
             gravity = Gravity.CENTER
-            switchCompat()
-                    .lparams {
-                        width = ViewGroup.LayoutParams.WRAP_CONTENT
-                        height = ViewGroup.LayoutParams.WRAP_CONTENT
-                    }
+            switchCompat {
+                setThumbResource(R.drawable.thumb)
+            }.lparams {
+                width = ViewGroup.LayoutParams.WRAP_CONTENT
+                height = ViewGroup.LayoutParams.WRAP_CONTENT
+            }
         }
     }
 }
