@@ -2,12 +2,24 @@
 <layer-list
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
-        <shape android:shape="oval">
-            <size
-                android:width="@dimen/thumb_size"
-                android:height="@dimen/thumb_size"/>
-            <solid android:color="@color/thumb_color"/>
-        </shape>
+        <transition>
+            <item>
+                <shape android:shape="oval">
+                    <size
+                        android:width="@dimen/thumb_size"
+                        android:height="@dimen/thumb_size"/>
+                    <solid android:color="?colorSwitchThumbNormal"/>
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="oval">
+                    <size
+                        android:width="@dimen/thumb_size"
+                        android:height="@dimen/thumb_size"/>
+                    <solid android:color="?colorAccent"/>
+                </shape>
+            </item>
+        </transition>
     </item>
     <item android:drawable="@drawable/eyes"/>
     <item android:drawable="@drawable/mouth"/>
