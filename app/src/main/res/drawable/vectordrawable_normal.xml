@@ -5,7 +5,11 @@
     android:viewportHeight="@integer/viewport_size"
     android:viewportWidth="@integer/viewport_size">
     <path
-        android:name="v"
+        android:name="@string/path_mouth"
         android:fillColor="#000000"
-        android:pathData="@string/path_normal"/>
+        android:pathData="@string/mouth_normal"/>
+    <path
+        android:name="@string/path_eyes"
+        android:fillColor="#000000"
+        android:pathData="@string/eyes_open"/>
 </vector>

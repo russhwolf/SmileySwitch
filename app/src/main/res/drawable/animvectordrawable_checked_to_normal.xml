@@ -2,6 +2,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:drawable="@drawable/vectordrawable_checked">
     <target
-        android:name="v"
-        android:animation="@anim/checked_to_normal"/>
+        android:name="@string/path_mouth"
+        android:animation="@anim/mouth_checked_to_normal"/>
 </animated-vector>
