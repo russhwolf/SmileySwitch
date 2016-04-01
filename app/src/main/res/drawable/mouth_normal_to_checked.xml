@@ -1,6 +1,6 @@
 <animated-vector
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/vectordrawable_normal">
+    android:drawable="@drawable/mouth_normal">
     <target
         android:name="@string/path_mouth"
         android:animation="@anim/mouth_normal_to_checked"/>

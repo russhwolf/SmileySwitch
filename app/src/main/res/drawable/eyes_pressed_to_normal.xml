@@ -1,0 +1,7 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/eyes_pressed">
+    <target
+        android:name="@string/path_eyes"
+        android:animation="@anim/eyes_pressed_to_normal"/>
+</animated-vector>

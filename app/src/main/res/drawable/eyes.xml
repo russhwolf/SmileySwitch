@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/pressed"
+        android:drawable="@drawable/eyes_pressed"
+        android:state_pressed="true"/>
+
+    <item
+        android:id="@+id/normal"
+        android:drawable="@drawable/eyes_normal"/>
+
+    <transition
+        android:fromId="@id/normal"
+        android:toId="@id/pressed"
+        android:drawable="@drawable/eyes_normal_to_pressed"/>
+    <transition
+        android:fromId="@id/pressed"
+        android:toId="@id/normal"
+        android:drawable="@drawable/eyes_pressed_to_normal"/>
+
+</animated-selector>
