@@ -3,7 +3,7 @@
     <string translatable="false" name="mouth_normal">M50,65 l 40,  0  0,10  -40, 0  -40,  0  0,-10  40, 0 z </string>
     <string translatable="false" name="mouth_smile"> M50,65 l 40,-10  0,10  -40,10  -40,-10  0,-10  40,10 z </string>
     <string translatable="false" name="eyes_open">  M30,40 l 10,0 0,-20 -10,0, 0,20 z M60,40 l 10,0 0,-20 -10,0, 0,20 z </string>
-    <string translatable="false" name="eyes_closed">M30,40 l 10,0 0,  0 -10,0, 0, 0 z M60,40 l 10,0 0,  0 -10,0, 0, 0 z </string>
+    <string translatable="false" name="eyes_closed">M30,40 l 10,0 0,-10 -10,0, 0,10 z M60,40 l 10,0 0,-10 -10,0, 0,10 z </string>
     <string translatable="false" name="path_mouth">mouth</string>
     <string translatable="false" name="path_eyes">eyes</string>
 </resources>
