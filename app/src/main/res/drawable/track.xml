@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transition xmlns:android="http://schemas.android.com/apk/res/android"
+            android:opacity="translucent">
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="@dimen/track_width"
+                android:height="@dimen/track_height"/>
+            <corners android:radius="@dimen/track_corner"/>
+            <solid android:color="?colorButtonNormal"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="@dimen/track_width"
+                android:height="@dimen/track_height"/>
+            <corners android:radius="@dimen/track_corner"/>
+            <solid android:color="?colorControlNormal"/>
+        </shape>
+    </item>
+</transition>
