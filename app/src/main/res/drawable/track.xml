@@ -12,6 +12,9 @@
     </item>
     <item>
         <shape android:shape="rectangle">
+            <padding
+                android:left="@dimen/track_padding"
+                android:right="@dimen/track_padding"/>
             <size
                 android:width="@dimen/track_width"
                 android:height="@dimen/track_height"/>
