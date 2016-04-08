@@ -2,7 +2,8 @@
 <resources>
     <dimen name="thumb_size">24dp</dimen>
     <dimen name="thumb_head_turn_offset">3dp</dimen>
+    <dimen name="thumb_head_squish_offset">2dp</dimen>
     <dimen name="track_width">72dp</dimen>
-    <dimen name="track_height">12dp</dimen>
+    <dimen name="track_height">24dp</dimen>
     <dimen name="track_corner">6dp</dimen>
 </resources>

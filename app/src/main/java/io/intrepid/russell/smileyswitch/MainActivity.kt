@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         verticalLayout {
             gravity = Gravity.CENTER
             trackableSwitch {
+                background = null
                 setThumbResource(R.drawable.thumb)
                 setTrackResource(R.drawable.track)
                 onCheckedChange { compoundButton, isChecked ->
@@ -35,18 +36,33 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
                 setThumbPositionListener { view, position, wasChecked ->
-                    val thumbLayers = thumbDrawable as LayerDrawable
+                    val offset = { progress: Float, threshold: Float, scale: Float ->
+                        (scale *
+                                (if (progress < threshold) {
+                                    progress / threshold
+                                } else if (progress > 1 - threshold) {
+                                    (1 - progress) / threshold
+                                } else {
+                                    1f
+                                })).toInt()
+                    }
+
                     val progress = if (wasChecked) 1 - position else position
-                    val threshold = 0.1f
-                    val offset = if (progress < threshold) progress / threshold else if (progress > 1 - threshold) (1 - progress) / threshold else 1f
-                    val range = resources.getDimension(R.dimen.thumb_head_turn_offset)
-                    val scaledOffset = (offset * range).toInt()
+                    val turnThreshold = 0.1f
+                    val turnRange = resources.getDimension(R.dimen.thumb_head_turn_offset)
+                    val turnOffset = offset(progress, turnThreshold, turnRange)
+                    val squishThreshold = 0.2f
+                    val squishRange = resources.getDimension(R.dimen.thumb_head_squish_offset)
+                    val squishOffset = offset(progress, squishThreshold, squishRange)
+
+                    val thumbLayers = thumbDrawable as LayerDrawable
+                    thumbLayers.setLayerInset(0, 0, squishOffset, 0, squishOffset);
                     if (wasChecked) {
-                        thumbLayers.setLayerInset(1, -scaledOffset, 0, scaledOffset, 0)
-                        thumbLayers.setLayerInset(2, -scaledOffset, 0, scaledOffset, 0)
+                        thumbLayers.setLayerInset(1, -turnOffset, 0, turnOffset, 0)
+                        thumbLayers.setLayerInset(2, -turnOffset, 0, turnOffset, 0)
                     } else {
-                        thumbLayers.setLayerInset(1, scaledOffset, 0, -scaledOffset, 0)
-                        thumbLayers.setLayerInset(2, scaledOffset, 0, -scaledOffset, 0)
+                        thumbLayers.setLayerInset(1, turnOffset, 0, -turnOffset, 0)
+                        thumbLayers.setLayerInset(2, turnOffset, 0, -turnOffset, 0)
                     }
                 }
             }.lparams {
