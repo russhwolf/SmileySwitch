@@ -8,11 +8,8 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Gravity
 import android.view.ViewGroup
 import android.view.ViewManager
+import org.jetbrains.anko.*
 import org.jetbrains.anko.custom.ankoView
-import org.jetbrains.anko.dip
-import org.jetbrains.anko.gravity
-import org.jetbrains.anko.onCheckedChange
-import org.jetbrains.anko.verticalLayout
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +19,8 @@ class MainActivity : AppCompatActivity() {
         verticalLayout {
             gravity = Gravity.CENTER
             trackableSwitch {
-                background = null
+                backgroundResource = R.drawable.hack_bugfix_background
+                thumbDrawable = getDrawable(R.drawable.thumb)
                 setThumbResource(R.drawable.thumb)
                 setTrackResource(R.drawable.track)
                 onCheckedChange { compoundButton, isChecked ->
