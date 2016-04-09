@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                     val squishOffset = offset(progress, squishThreshold, squishRange)
 
                     val thumbLayers = thumbDrawable as LayerDrawable
-                    thumbLayers.setLayerInset(0, 0, squishOffset, 0, squishOffset);
+                    thumbLayers.setLayerInset(0, -squishOffset, squishOffset, -squishOffset, squishOffset);
                     if (wasChecked) {
                         thumbLayers.setLayerInset(1, -turnOffset, 0, turnOffset, 0)
                         thumbLayers.setLayerInset(2, -turnOffset, 0, turnOffset, 0)
