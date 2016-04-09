@@ -8,8 +8,11 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Gravity
 import android.view.ViewGroup
 import android.view.ViewManager
-import org.jetbrains.anko.*
+import org.jetbrains.anko.backgroundResource
 import org.jetbrains.anko.custom.ankoView
+import org.jetbrains.anko.gravity
+import org.jetbrains.anko.onCheckedChange
+import org.jetbrains.anko.verticalLayout
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
                 setThumbPositionListener { view, position, wasChecked ->
-                    val offset = { progress: Float, threshold: Float, scale: Int ->
+                    val offset = { progress: Float, threshold: Float, scale: Float ->
                         (scale *
                                 (if (progress < threshold) {
                                     progress / threshold
@@ -49,10 +52,10 @@ class MainActivity : AppCompatActivity() {
 
                     val progress = if (wasChecked) 1 - position else position
                     val turnThreshold = 0.1f
-                    val turnRange = dip(3)
+                    val turnRange = resources.getDimension(R.dimen.turn_range)
                     val turnOffset = offset(progress, turnThreshold, turnRange)
                     val squishThreshold = 0.2f
-                    val squishRange = dip(2)
+                    val squishRange = resources.getDimension(R.dimen.squish_range)
                     val squishOffset = offset(progress, squishThreshold, squishRange)
 
                     val thumbLayers = thumbDrawable as LayerDrawable

@@ -5,4 +5,6 @@
     <dimen name="track_height">32dp</dimen>
     <dimen name="track_corner">20dp</dimen>
     <dimen name="track_padding">4dp</dimen>
+    <dimen name="squish_range">2dp</dimen>
+    <dimen name="turn_range">3dp</dimen>
 </resources>
