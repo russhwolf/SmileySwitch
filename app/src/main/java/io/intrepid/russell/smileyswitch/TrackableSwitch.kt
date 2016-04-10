@@ -3,7 +3,7 @@ package io.intrepid.russell.smileyswitch
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
-import io.intrepid.russell.smileyswitch.io.intrepid.russell.smileyswitch.support.SwitchCompat
+import io.intrepid.russell.smileyswitch.support.SwitchCompat
 
 /**
  * This is an extension of the SwitchCompat widget which exposes a listener to track the thumb position.
