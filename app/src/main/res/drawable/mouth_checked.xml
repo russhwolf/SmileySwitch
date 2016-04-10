@@ -6,6 +6,6 @@
     android:viewportWidth="@integer/viewport_size">
     <path
         android:name="@string/path_mouth"
-        android:fillColor="#000000"
+        android:fillColor="@color/face"
         android:pathData="@string/mouth_smile"/>
 </vector>

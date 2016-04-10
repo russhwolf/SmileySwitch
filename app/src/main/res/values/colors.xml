@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="face">@android:color/black</color>
+    <color name="gif_grey">#d0cccd</color>
+    <color name="gif_blue">#00b9ee</color>
+    <color name="gif_white">#ffffff</color>
 </resources>

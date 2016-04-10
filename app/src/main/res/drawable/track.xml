@@ -7,7 +7,7 @@
                 android:width="@dimen/track_width"
                 android:height="@dimen/track_height"/>
             <corners android:radius="@dimen/track_corner"/>
-            <solid android:color="?colorButtonNormal"/>
+            <solid android:color="@color/gif_grey"/>
         </shape>
     </item>
     <item>
@@ -19,7 +19,7 @@
                 android:width="@dimen/track_width"
                 android:height="@dimen/track_height"/>
             <corners android:radius="@dimen/track_corner"/>
-            <solid android:color="?colorControlNormal"/>
+            <solid android:color="@color/gif_blue"/>
         </shape>
     </item>
 </transition>

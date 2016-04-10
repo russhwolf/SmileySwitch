@@ -11,7 +11,7 @@
                         <size
                             android:width="@dimen/thumb_size"
                             android:height="@dimen/thumb_size"/>
-                        <solid android:color="?colorSwitchThumbNormal"/>
+                        <solid android:color="@color/gif_white"/>
                     </shape>
                 </item>
                 <item>
@@ -19,7 +19,7 @@
                         <size
                             android:width="@dimen/thumb_size"
                             android:height="@dimen/thumb_size"/>
-                        <solid android:color="?colorAccent"/>
+                        <solid android:color="@color/gif_white"/>
                     </shape>
                 </item>
             </transition>
