@@ -1,7 +1,0 @@
-<objectAnimator
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:duration="@integer/animation_duration_ms"
-    android:propertyName="pathData"
-    android:valueFrom="@string/mouth_smile"
-    android:valueTo="@string/mouth_normal"
-    android:valueType="pathType"/>

@@ -1,6 +1,6 @@
 <objectAnimator
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:duration="@integer/animation_duration_ms"
+    android:duration="@integer/pressed_animation_duration_ms"
     android:propertyName="pathData"
     android:valueFrom="@string/eyes_open"
     android:valueTo="@string/eyes_closed"

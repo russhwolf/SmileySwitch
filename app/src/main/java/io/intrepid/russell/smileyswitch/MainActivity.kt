@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
                 onCheckedChange { compoundButton, isChecked ->
                     val thumbBg = (((thumbDrawable as LayerDrawable).getDrawable(0)) as InsetDrawable).drawable as TransitionDrawable
                     val track = (trackDrawable) as TransitionDrawable
-                    val duration = resources.getInteger(R.integer.animation_duration_ms)
+                    val duration = resources.getInteger(R.integer.checked_animation_duration_ms)
                     if (isChecked) {
                         thumbBg.startTransition(duration)
                         track.startTransition(duration)
