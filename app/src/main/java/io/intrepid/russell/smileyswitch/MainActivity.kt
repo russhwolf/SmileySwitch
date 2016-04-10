@@ -1,6 +1,5 @@
 package io.intrepid.russell.smileyswitch
 
-import android.graphics.drawable.InsetDrawable
 import android.graphics.drawable.LayerDrawable
 import android.graphics.drawable.TransitionDrawable
 import android.os.Bundle
@@ -23,18 +22,14 @@ class MainActivity : AppCompatActivity() {
             gravity = Gravity.CENTER
             trackableSwitch {
                 backgroundResource = R.drawable.hack_bugfix_background
-                thumbDrawable = getDrawable(R.drawable.thumb)
                 setThumbResource(R.drawable.thumb)
                 setTrackResource(R.drawable.track)
                 onCheckedChange { compoundButton, isChecked ->
-                    val thumbBg = (((thumbDrawable as LayerDrawable).getDrawable(0)) as InsetDrawable).drawable as TransitionDrawable
                     val track = (trackDrawable) as TransitionDrawable
                     val duration = resources.getInteger(R.integer.checked_animation_duration_ms)
                     if (isChecked) {
-                        thumbBg.startTransition(duration)
                         track.startTransition(duration)
                     } else {
-                        thumbBg.reverseTransition(duration)
                         track.reverseTransition(duration)
                     }
                 }
