@@ -6,9 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.Gravity
 import android.view.ViewGroup
-import android.view.ViewManager
 import org.jetbrains.anko.backgroundResource
-import org.jetbrains.anko.custom.ankoView
 import org.jetbrains.anko.gravity
 import org.jetbrains.anko.onCheckedChange
 import org.jetbrains.anko.verticalLayout
@@ -70,6 +68,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
-inline fun ViewManager.trackableSwitch() = trackableSwitch {}
-inline fun ViewManager.trackableSwitch(init: TrackableSwitch.() -> Unit) = ankoView({ TrackableSwitch(it) }, init)

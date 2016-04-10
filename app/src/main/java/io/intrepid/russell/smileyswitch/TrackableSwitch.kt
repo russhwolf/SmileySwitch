@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import io.intrepid.russell.smileyswitch.support.SwitchCompat
+import org.jetbrains.anko.custom.ankoView
 
 /**
  * This is an extension of the SwitchCompat widget which exposes a listener to track the thumb position.
@@ -53,3 +54,7 @@ class TrackableSwitch : SwitchCompat {
         fun onThumbPositionChanged(view: TrackableSwitch, position: Float, wasChecked: Boolean)
     }
 }
+
+// For Anko use
+inline fun android.view.ViewManager.trackableSwitch() = trackableSwitch {}
+inline fun android.view.ViewManager.trackableSwitch(init: io.intrepid.russell.smileyswitch.TrackableSwitch.() -> Unit) = ankoView({ io.intrepid.russell.smileyswitch.TrackableSwitch(it) }, init)
