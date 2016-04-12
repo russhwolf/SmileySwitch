@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="thumb_size">80dp</dimen>
-    <dimen name="track_width">180dp</dimen>
+    <dimen name="track_width">220dp</dimen>
     <dimen name="track_height">80dp</dimen>
     <dimen name="track_corner">50dp</dimen>
     <dimen name="track_padding">10dp</dimen>
     <dimen name="squish_range">5dp</dimen>
-    <dimen name="turn_range">7.5dp</dimen>
+    <dimen name="turn_range">10dp</dimen>
 </resources>

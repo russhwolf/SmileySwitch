@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
             gravity = Gravity.CENTER
             trackableSwitch {
                 backgroundResource = R.drawable.hack_bugfix_background
+                switchMinWidth = resources.getDimensionPixelSize(R.dimen.track_width)
                 setThumbResource(R.drawable.thumb)
                 setTrackResource(R.drawable.track)
                 onCheckedChange { compoundButton, isChecked ->
